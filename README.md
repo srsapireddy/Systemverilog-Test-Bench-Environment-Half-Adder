@@ -30,9 +30,9 @@ Reference Model: Design and Verification teams are different teams. We will get 
 
 As shown in the figure, we can consider a second monitor. If we are using two monitors, we need to understand that. We can sample only input signals in monitor one, and whatever the output is performed in the DUT, we can sample in monitor 2. We do this because, in the reference model, we only need input signals sampled from monitor 1, and we can sample what the DUT is doing using monitor 2. Then, we can pass the output from monitor 2 to the scoreboard through the mailbox. Then, we compare both outputs using the scoreboard logic. 
 
-Virtual Interface: Our interface is static, and classes are dynamic in nature. Dynamic is something that is created at the runtime. Static is created at the - memory allocation  takes place at the compilation time. At compilation time, we can say that the memory is already present. It is not possible to do the communication between the dynamic and static classes. Because one thing is present, and the second thing is not present. Mean classes will only exist once we do new. New here means creating the constructor only, and then memory allocation occurs for the driver class. Thus, it is impossible to communicate between the driver class and the interface. To avoid this we use the virtual interface.
+Virtual Interface: Our interface is static, and classes are dynamic in nature. Dynamic is something that is created at the runtime. Static is created at the - memory allocation  takes place at the compilation time. At compilation time, we can say that the memory is already present. It is not possible to do the communication between the dynamic and static classes. Because one thing is present, and the second thing is not present. Mean classes will only exist once we do new. New here means creating the constructor only, and then memory allocation occurs for the driver class. Thus, it is impossible to communicate between the driver class and the interface. To avoid this, we use the virtual interface.
 
-The virtual interface is a pointer to the actual interface. 
+The virtual interface is a pointer to the actual interface. This virtual interface will be pointing to the actual interface. So the communication between the driver and the interface will happen using the virtual interface. 
 
 
 
